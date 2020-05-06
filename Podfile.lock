@@ -1,14 +1,14 @@
 PODS:
   - BigInt (5.0.0)
-  - EosioSwift (0.2.1):
+  - ArisenSwift (0.2.1):
     - BigInt (~> 5.0)
     - PromiseKit (~> 6.8)
-  - EosioSwiftEcc (0.2.1):
-    - EosioSwift (~> 0.2.1)
+  - ArisenSwiftEcc (0.2.1):
+    - ArisenSwift (~> 0.2.1)
     - GRKOpenSSLFramework (= 1.0.2.19)
-  - EosioSwiftVault (0.2.1):
-    - EosioSwift (~> 0.2.1)
-    - EosioSwiftEcc (~> 0.2.1)
+  - ArisenSwiftVault (0.2.1):
+    - ArisenSwift (~> 0.2.1)
+    - ArisenSwiftEcc (~> 0.2.1)
   - GRKOpenSSLFramework (1.0.2.19)
   - PromiseKit (6.11.0):
     - PromiseKit/CorePromise (= 6.11.0)
@@ -22,26 +22,26 @@ PODS:
   - SwiftLint (0.32.0)
 
 DEPENDENCIES:
-  - EosioSwift (~> 0.2.1)
-  - EosioSwiftEcc (~> 0.2.1)
-  - EosioSwiftVault (~> 0.2.1)
+  - ArisenSwift (~> 0.2.1)
+  - ArisenSwiftEcc (~> 0.2.1)
+  - ArisenSwiftVault (~> 0.2.1)
   - SwiftLint
 
 SPEC REPOS:
   trunk:
     - BigInt
-    - EosioSwift
-    - EosioSwiftEcc
-    - EosioSwiftVault
+    - ArisenSwift
+    - ArisenSwiftEcc
+    - ArisenSwiftVault
     - GRKOpenSSLFramework
     - PromiseKit
     - SwiftLint
 
 SPEC CHECKSUMS:
   BigInt: 74b4d88367b0e819d9f77393549226d36faeb0d8
-  EosioSwift: 21ca0d61e7928a982a64c82b623e7342d7dd86dc
-  EosioSwiftEcc: b0ba4fe71c70c377e30d2ce79fcf1b55864c7669
-  EosioSwiftVault: 08652ac332331110d5ef30aaad7ffc7e089239d7
+  ArisenSwift: 21ca0d61e7928a982a64c82b623e7342d7dd86dc
+  ArisenSwiftEcc: b0ba4fe71c70c377e30d2ce79fcf1b55864c7669
+  ArisenSwiftVault: 08652ac332331110d5ef30aaad7ffc7e089239d7
   GRKOpenSSLFramework: 4abc733a8fcbc37060619a86a54202d2938dd70e
   PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
   SwiftLint: 009a898ef2a1c851f45e1b59349bf6ff2ddc990d

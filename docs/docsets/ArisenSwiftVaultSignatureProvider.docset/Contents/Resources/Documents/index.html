@@ -64,10 +64,10 @@
         <section class="section">
           <div class="section-content">
             
-            <p><img src="https://github.com/ARISEN/arisen-swift-vault-signature-provider/raw/master/img/swift-logo.png" alt="Swift Logo"></p>
+            <p><img src="https://github.com/Arisen/arisen-swift-vault-signature-provider/raw/master/img/swift-logo.png" alt="Swift Logo"></p>
 <h1 id='arisen-sdk-for-swift-vault-signature-provider-img-src-https-img-shields-io-badge-arisen-alpha-blue-svg-alt-arisen-alpha' class='heading'>Arisen SDK for Swift: Vault Signature Provider <img src="https://img.shields.io/badge/Arisen-Alpha-blue.svg" alt="Arisen Alpha"></h1>
 
-<p><a href="https://github.com/ARISEN/arisen-swift/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" alt="Software License"></a>
+<p><a href="https://github.com/Arisen/arisen-swift/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey.svg" alt="Software License"></a>
 <a href="https://swift.org"><img src="https://img.shields.io/badge/Language-Swift_5.0-orange.svg" alt="Swift 5.0"></a>
 <img src="https://img.shields.io/badge/Deployment%20Target-iOS%2011.3-blue.svg" alt=""></p>
 
@@ -108,9 +108,9 @@
 </ul>
 <h2 id='dependencies' class='heading'>Dependencies</h2>
 
-<p>Vault Signature Provider depends on the <a href="https://github.com/Arisen/arisen-swift-vault">Arisen SDK for Swift: Vault</a> library. Vault will automatically be installed when you include Vault Signature Provider in your application with CocoaPods.</p>
+<p>Vault Signature Provider depends on the <a href="https://github.com/ARISEN/arisen-swift-vault">Arisen SDK for Swift: Vault</a> library. Vault will automatically be installed when you include Vault Signature Provider in your application with CocoaPods.</p>
 
-<p>To access more Keychain and/or Secure Enclave functionality, use Vault directly. Refer to the <a href="https://github.com/Arisen/arisen-swift-vault">Arisen SDK for Swift: Vault documentation</a> for more information.</p>
+<p>To access more Keychain and/or Secure Enclave functionality, use Vault directly. Refer to the <a href="https://github.com/ARISEN/arisen-swift-vault">Arisen SDK for Swift: Vault documentation</a> for more information.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 
 <p>Vault Signature Provider is intended to be used in conjunction with <a href="https://github.com/Arisen/arisen-swift">Arisen SDK for Swift</a> as a provider plugin.</p>
@@ -133,14 +133,14 @@
 <p>Now Vault Signature Provider is ready for use within Arisen SDK for Swift according to the <a href="https://github.com/Arisen/arisen-swift/tree/master#basic-usage">Arisen SDK for Swift Basic Usage instructions</a>.</p>
 <h2 id='direct-usage' class='heading'>Direct Usage</h2>
 
-<p>Generally, signature providers are called by <a href="https://github.com/Arisen/arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift"><code>ArisenTransaction</code></a> during signing. (<a href="https://github.com/Arisen/arisen-swift#basic-usage">See an example here.</a>) If you find, however, that you need to get available keys or request signing directly, this library can be invoked as follows:</p>
+<p>Generally, signature providers are called by <a href="https://github.com/Arisen/arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift"><code>ArisenTransaction</code></a> during signing. (<a href="https://github.com/Arisen/Arisen-swift#basic-usage">See an example here.</a>) If you find, however, that you need to get available keys or request signing directly, this library can be invoked as follows:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">signProvider</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">ArisenVaultSignatureProvider</span><span class="p">(</span><span class="nv">accessGroup</span><span class="p">:</span> <span class="s">"YOUR_ACCESS_GROUP"</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">publicKeysArray</span> <span class="o">=</span> <span class="n">signProvider</span><span class="p">?</span><span class="o">.</span><span class="nf">getAvailableKeys</span><span class="p">()</span> <span class="c1">// Returns the public keys.</span>
 </code></pre>
 
 <p><em><a href="https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps">Learn more about Access Groups here.</a></em></p>
 
-<p>To sign an <a href="https://github.com/Arisen/Arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift"><code>ArisenTransaction</code></a>, create an <a href="https://github.com/Arisen/arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift"><code>ArisenTransactionSignatureRequest</code></a> object and call the <code><a href="Classes/ArisenVaultSignatureProvider.html#/s:32ArisenSwiftVaultSignatureProvider0acdE0C15signTransactionyyXe_XetcACF">ArisenVaultSignatureProvider.signTransaction(request:completion:)</a></code> method with the request:</p>
+<p>To sign an <a href="https://github.com/Arisen/arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift"><code>ArisenTransaction</code></a>, create an <a href="https://github.com/Arisen/Arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift"><code>ArisenTransactionSignatureRequest</code></a> object and call the <code><a href="Classes/ArisenVaultSignatureProvider.html#/s:32ArisenSwiftVaultSignatureProvider0acdE0C15signTransactionyyXe_XetcACF">ArisenVaultSignatureProvider.signTransaction(request:completion:)</a></code> method with the request:</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">signRequest</span> <span class="o">=</span> <span class="kt">ArisenTransactionSignatureRequest</span><span class="p">()</span>
 <span class="n">signRequest</span><span class="o">.</span><span class="n">serializedTransaction</span> <span class="o">=</span> <span class="n">serializedTransaction</span>
 <span class="n">signRequest</span><span class="o">.</span><span class="n">publicKeys</span> <span class="o">=</span> <span class="n">publicKeys</span>
@@ -176,13 +176,13 @@
 <p>Other Keychain and/or Secure Enclave functionality can be accessed by calling methods directly on <a href="https://github.com/Arisen/arisen-swift-vault">Arisen SDK for Swift: Vault</a>, which is included with this library as a dependency.</p>
 <h2 id='want-to-help' class='heading'>Want to help?</h2>
 
-<p>Interested in contributing? That&rsquo;s awesome! Here are some <a href="https://github.com/Arisen/arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md">Contribution Guidelines</a> and the <a href="https://github.com/Arisen/arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md#conduct">Code of Conduct</a>.</p>
+<p>Interested in contributing? That&rsquo;s awesome! Here are some <a href="https://github.com/Arisen/arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md">Contribution Guidelines</a> and the <a href="https://github.com/Arisen/Arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md#conduct">Code of Conduct</a>.</p>
 <h2 id='license' class='heading'>License</h2>
 
 <p><a href="https://github.com/Arisen/arisen-swift-vault-signature-provider/blob/master/LICENSE">MIT</a></p>
 <h2 id='important' class='heading'>Important</h2>
 
-<p>See LICENSE for copyright and license terms.  Block.one makes its contribution on a voluntary basis as a member of the Arisen community and is not responsible for ensuring the overall performance of the software or any related applications.  We make no representation, warranty, guarantee or undertaking in respect of the software or any related documentation, whether expressed or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall we be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or documentation or the use or other dealings in the software or documentation. Any test results or performance figures are indicative and will not reflect performance under all conditions.  Any reference to any third party or third-party product, service or other resource is not an endorsement or recommendation by Block.one.  We are not responsible, and disclaim any and all responsibility and liability, for your use of or reliance on any of these resources. Third-party resources may be updated, changed or terminated at any time, so the information here may be out of date or inaccurate.  Any person using or offering this software in connection with providing software, goods or services to third parties shall advise such third parties of these license terms, disclaimers and exclusions of liability.  Block.one, Arisen, Arisen Labs, RIX, the heptahedron and associated logos are trademarks of Block.one.</p>
+<p>See LICENSE for copyright and license terms.  Block.one makes its contribution on a voluntary basis as a member of the Arisen community and is not responsible for ensuring the overall performance of the software or any related applications.  We make no representation, warranty, guarantee or undertaking in respect of the software or any related documentation, whether expressed or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall we be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or documentation or the use or other dealings in the software or documentation. Any test results or performance figures are indicative and will not reflect performance under all conditions.  Any reference to any third party or third-party product, service or other resource is not an endorsement or recommendation by Block.one.  We are not responsible, and disclaim any and all responsibility and liability, for your use of or reliance on any of these resources. Third-party resources may be updated, changed or terminated at any time, so the information here may be out of date or inaccurate.  Any person using or offering this software in connection with providing software, goods or services to third parties shall advise such third parties of these license terms, disclaimers and exclusions of liability.  Block.one, Arisen, Arisen Labs, RSN, the heptahedron and associated logos are trademarks of Block.one.</p>
 
 <p>Wallets and related components are complex software that require the highest levels of security.  If incorrectly built or used, they may compromise users’ private keys and digital assets. Wallet applications and related components should undergo thorough security evaluations before being used.  Only experienced developers should work with this software.</p>
 

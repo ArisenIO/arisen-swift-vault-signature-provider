@@ -7,37 +7,37 @@ inhibit_all_warnings!
 
 if using_local_pods
   # Pull pods from sibling directories if using local pods
-  target 'EosioSwiftVaultSignatureProvider' do
+  target 'ArisenSwiftVaultSignatureProvider' do
     use_frameworks!
 
-    pod 'EosioSwift', :path => '../eosio-swift'
-    pod 'EosioSwiftEcc', :path => '../eosio-swift-ecc'
-    pod 'EosioSwiftVault', :path => '../eosio-swift-vault'
+    pod 'ArisenSwift', :path => '../arisen-swift'
+    pod 'ArisenSwiftEcc', :path => '../arisen-swift-ecc'
+    pod 'ArisenSwiftVault', :path => '../arisen-swift-vault'
     pod 'SwiftLint'
 
-    target 'EosioSwiftVaultSignatureProviderTests' do
+    target 'ArisenSwiftVaultSignatureProviderTests' do
       inherit! :search_paths
-      pod 'EosioSwift', :path => '../eosio-swift'
-      pod 'EosioSwiftEcc', :path => '../eosio-swift-ecc'
-      pod 'EosioSwiftVault', :path => '../eosio-swift-vault'
+      pod 'ArisenSwift', :path => '../arisen-swift'
+      pod 'ArisenSwiftEcc', :path => '../arisen-swift-ecc'
+      pod 'ArisenSwiftVault', :path => '../arisen-swift-vault'
     end
   end
 else
   # Pull pods from sources above if not using local pods
-  target 'EosioSwiftVaultSignatureProvider' do
+  target 'ArisenSwiftVaultSignatureProvider' do
     use_frameworks!
 
-    pod 'EosioSwift', '~> 0.2.1'
-    pod 'EosioSwiftEcc', '~> 0.2.1'
-    pod 'EosioSwiftVault', '~> 0.2.1'
+    pod 'ArisenSwift', '~> 0.2.1'
+    pod 'ArisenSwiftEcc', '~> 0.2.1'
+    pod 'ArisenSwiftVault', '~> 0.2.1'
     pod 'SwiftLint'
 
-    target 'EosioSwiftVaultSignatureProviderTests' do
+    target 'ArisenSwiftVaultSignatureProviderTests' do
       use_frameworks!
       inherit! :search_paths
-      pod 'EosioSwift', '~> 0.2.1'
-      pod 'EosioSwiftEcc', '~> 0.2.1'
-      pod 'EosioSwiftVault', '~> 0.2.1'
+      pod 'ArisenSwift', '~> 0.2.1'
+      pod 'ArisenSwiftEcc', '~> 0.2.1'
+      pod 'ArisenSwiftVault', '~> 0.2.1'
     end
   end
 end

@@ -1,6 +1,6 @@
 language: swift
-xcode_workspace: EosioSwiftVaultSignatureProvider.xcworkspace
-xcode_scheme: EosioSwiftVaultSignatureProviderTests
+xcode_workspace: ArisenSwiftVaultSignatureProvider.xcworkspace
+xcode_scheme: ArisenSwiftVaultSignatureProviderTests
 osx_image: xcode10.2
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
 before_install:

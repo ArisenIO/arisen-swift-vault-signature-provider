@@ -9,29 +9,15 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2869ED85225D2B990069A40E"
-               BuildableName = "EosioSwiftVaultSignatureProvider.framework"
-               BlueprintName = "EosioSwiftVaultSignatureProvider"
-               ReferencedContainer = "container:EosioSwiftVaultSignatureProvider.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
             buildForProfiling = "NO"
             buildForArchiving = "NO"
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2869ED8E225D2B990069A40E"
-               BuildableName = "EosioSwiftVaultSignatureProviderTests.xctest"
-               BlueprintName = "EosioSwiftVaultSignatureProviderTests"
-               ReferencedContainer = "container:EosioSwiftVaultSignatureProvider.xcodeproj">
+               BuildableName = "ArisenSwiftVaultSignatureProviderTests.xctest"
+               BlueprintName = "ArisenSwiftVaultSignatureProviderTests"
+               ReferencedContainer = "container:ArisenSwiftVaultSignatureProvider.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,21 +33,12 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2869ED8E225D2B990069A40E"
-               BuildableName = "EosioSwiftVaultSignatureProviderTests.xctest"
-               BlueprintName = "EosioSwiftVaultSignatureProviderTests"
-               ReferencedContainer = "container:EosioSwiftVaultSignatureProvider.xcodeproj">
+               BuildableName = "ArisenSwiftVaultSignatureProviderTests.xctest"
+               BlueprintName = "ArisenSwiftVaultSignatureProviderTests"
+               ReferencedContainer = "container:ArisenSwiftVaultSignatureProvider.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2869ED85225D2B990069A40E"
-            BuildableName = "EosioSwiftVaultSignatureProvider.framework"
-            BlueprintName = "EosioSwiftVaultSignatureProvider"
-            ReferencedContainer = "container:EosioSwiftVaultSignatureProvider.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -78,10 +55,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2869ED85225D2B990069A40E"
-            BuildableName = "EosioSwiftVaultSignatureProvider.framework"
-            BlueprintName = "EosioSwiftVaultSignatureProvider"
-            ReferencedContainer = "container:EosioSwiftVaultSignatureProvider.xcodeproj">
+            BlueprintIdentifier = "2869ED8E225D2B990069A40E"
+            BuildableName = "ArisenSwiftVaultSignatureProviderTests.xctest"
+            BlueprintName = "ArisenSwiftVaultSignatureProviderTests"
+            ReferencedContainer = "container:ArisenSwiftVaultSignatureProvider.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -96,10 +73,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2869ED85225D2B990069A40E"
-            BuildableName = "EosioSwiftVaultSignatureProvider.framework"
-            BlueprintName = "EosioSwiftVaultSignatureProvider"
-            ReferencedContainer = "container:EosioSwiftVaultSignatureProvider.xcodeproj">
+            BlueprintIdentifier = "2869ED8E225D2B990069A40E"
+            BuildableName = "ArisenSwiftVaultSignatureProviderTests.xctest"
+            BlueprintName = "ArisenSwiftVaultSignatureProviderTests"
+            ReferencedContainer = "container:ArisenSwiftVaultSignatureProvider.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -1,15 +1,15 @@
 //
-//  EosioSwiftVaultSignatureProviderTests.swift
-//  EosioSwiftVaultSignatureProviderTests
+//  ArisenSwiftVaultSignatureProviderTests.swift
+//  ArisenSwiftVaultSignatureProviderTests
 //
 //  Created by Todd Bowden on 4/9/19.
 //  Copyright (c) 2017-2019 block.one and its contributors. All rights reserved.
 //
 
 import XCTest
-@testable import EosioSwiftVaultSignatureProvider
+@testable import ArisenSwiftVaultSignatureProvider
 
-class EosioSwiftVaultSignatureProviderTests: XCTestCase {
+class ArisenSwiftVaultSignatureProviderTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
