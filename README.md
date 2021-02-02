@@ -1,11 +1,11 @@
-![Swift Logo](https://github.com/Arisen/Arisen-swift-vault-signature-provider/raw/master/img/swift-logo.png)
+![Swift Logo](https://github.com/arisenio/Arisen-swift-vault-signature-provider/raw/master/img/swift-logo.png)
 # ARISEN SDK for Swift: Vault Signature Provider ![ARISEN Alpha](https://img.shields.io/badge/ARISEN-Alpha-blue.svg)
 
-[![Software License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/ARISEN/arisen-swift/blob/master/LICENSE)
+[![Software License](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/arisenio/arisen-swift/blob/master/LICENSE)
 [![Swift 5.0](https://img.shields.io/badge/Language-Swift_5.0-orange.svg)](https://swift.org)
 ![](https://img.shields.io/badge/Deployment%20Target-iOS%2011.3-blue.svg)
 
-Vault Signature Provider is a pluggable signature provider for [ARISEN SDK for Swift](https://github.com/ARISEN/arisen-swift). It allows for signing transactions using keys stored in Keychain or the device's Secure Enclave.
+Vault Signature Provider is a pluggable signature provider for [ARISEN SDK for Swift](https://github.com/arisenio/arisen-swift). It allows for signing transactions using keys stored in Keychain or the device's Secure Enclave.
 
 *All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.*
 
@@ -23,14 +23,14 @@ Vault Signature Provider is a pluggable signature provider for [ARISEN SDK for S
 
 ## About Signature Providers
 
-The Signature Provider abstraction is arguably the most useful of all of the [Arisen SDK for Swift](https://github.com/ARISEN/arisen-swift) providers. It is responsible for:
+The Signature Provider abstraction is arguably the most useful of all of the [Arisen SDK for Swift](https://github.com/arisenio/arisen-swift) providers. It is responsible for:
 
 * finding out what keys are available for signing (`getAvailableKeys`), and
 * requesting and obtaining transaction signatures with a subset of the available keys (`signTransaction`).
 
-By simply switching out the signature provider on a transaction, signature requests can be routed any number of ways. Need a signature from keys in the platform's Keychain or Secure Enclave? [Configure the `ArisenTransaction`](https://github.com/ARISEN/arisen-swift#basic-usage) with this signature provider. Need software signing? Take a look at the [Softkey Signature Provider](https://github.com/ARISEN/arisen-swift-softkey-signature-provider).
+By simply switching out the signature provider on a transaction, signature requests can be routed any number of ways. Need a signature from keys in the platform's Keychain or Secure Enclave? [Configure the `ArisenTransaction`](https://github.com/arisenio/arisen-swift#basic-usage) with this signature provider. Need software signing? Take a look at the [Softkey Signature Provider](https://github.com/arisenio/arisen-swift-softkey-signature-provider).
 
-All signature providers must conform to the [ArisenSignatureProviderProtocol](https://github.com/Arisen/Arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift) Protocol.
+All signature providers must conform to the [ArisenSignatureProviderProtocol](https://github.com/arisenio/Arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift) Protocol.
 
 ## Prerequisites
 
@@ -40,13 +40,13 @@ All signature providers must conform to the [ArisenSignatureProviderProtocol](ht
 
 ## Dependencies
 
-Vault Signature Provider depends on the [Arisen SDK for Swift: Vault](https://github.com/ARISEN/arisen-swift-vault) library. Vault will automatically be installed when you include Vault Signature Provider in your application with CocoaPods.
+Vault Signature Provider depends on the [Arisen SDK for Swift: Vault](https://github.com/arisenio/arisen-swift-vault) library. Vault will automatically be installed when you include Vault Signature Provider in your application with CocoaPods.
 
-To access more Keychain and/or Secure Enclave functionality, use Vault directly. Refer to the [Arisen SDK for Swift: Vault documentation](https://github.com/ARISEN/arisen-swift-vault) for more information.
+To access more Keychain and/or Secure Enclave functionality, use Vault directly. Refer to the [Arisen SDK for Swift: Vault documentation](https://github.com/arisenio/arisen-swift-vault) for more information.
 
 ## Installation
 
-Vault Signature Provider is intended to be used in conjunction with [ARISEN SDK for Swift](https://github.com/ARISEN/arisen-swift) as a provider plugin.
+Vault Signature Provider is intended to be used in conjunction with [ARISEN SDK for Swift](https://github.com/arisenio/arisen-swift) as a provider plugin.
 
 To use Vault Signature Provider with Arisen SDK for Swift in your app, add the following pods to your [Podfile](https://guides.cocoapods.org/syntax/podfile.html):
 
@@ -65,11 +65,11 @@ Then run `pod install`.
 
 Next, you must configure your application as a member of an App Group. See [Apple's documentation here](https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps#2974917) for instructions on enabling and configuring the App Group Capability in Xcode.
 
-Now Vault Signature Provider is ready for use within ARISEN SDK for Swift according to the [ARISEN SDK for Swift Basic Usage instructions](https://github.com/ARISEN/arisen-swift/tree/master#basic-usage).
+Now Vault Signature Provider is ready for use within ARISEN SDK for Swift according to the [ARISEN SDK for Swift Basic Usage instructions](https://github.com/arisenio/arisen-swift/tree/master#basic-usage).
 
 ## Direct Usage
 
-Generally, signature providers are called by [`ArisenTransaction`](https://github.com/Arisen/arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift) during signing. ([See an example here.](https://github.com/ARISEN/arisen-swift#basic-usage)) If you find, however, that you need to get available keys or request signing directly, this library can be invoked as follows:
+Generally, signature providers are called by [`ArisenTransaction`](https://github.com/arisenio/arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift) during signing. ([See an example here.](https://github.com/arisenio/arisen-swift#basic-usage)) If you find, however, that you need to get available keys or request signing directly, this library can be invoked as follows:
 
 ```swift
 let signProvider = try? ArisenVaultSignatureProvider(accessGroup: "YOUR_ACCESS_GROUP")
@@ -78,7 +78,7 @@ let publicKeysArray = signProvider?.getAvailableKeys() // Returns the public key
 
 _[Learn more about Access Groups here.](https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps)_
 
-To sign an [`ArisenTransaction`](https://github.com/Arisen/arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift), create an [`ArisenTransactionSignatureRequest`](https://github.com/ARISEN/arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift) object and call the `ArisenVaultSignatureProvider.signTransaction(request:completion:)` method with the request:
+To sign an [`ArisenTransaction`](https://github.com/arisenio/arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift), create an [`ArisenTransactionSignatureRequest`](https://github.com/arisenio/arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift) object and call the `ArisenVaultSignatureProvider.signTransaction(request:completion:)` method with the request:
 
 ```swift
 var signRequest = ArisenTransactionSignatureRequest()
@@ -93,13 +93,13 @@ signProvider.signTransaction(request: signRequest) { (response) in
 
 ## Documentation
 
-Please refer to the generated code documentation at https://arisen.github.io/arisen-swift-vault-signature-provider or by cloning this repo and opening the `docs/index.html` file in your browser.
+Please refer to the generated code documentation at https://arisenio.github.io/arisen-swift-vault-signature-provider or by cloning this repo and opening the `docs/index.html` file in your browser.
 
 ## Library Methods
 
-This library is an implementation of [`ArisenSignatureProviderProtocol`](https://github.com/ARISEN/arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift). It implements the following protocol methods:
+This library is an implementation of [`ArisenSignatureProviderProtocol`](https://github.com/arisenio/arisen-swift/blob/master/ArisenSwift/ArisenSignatureProviderProtocol/ArisenSignatureProviderProtocol.swift). It implements the following protocol methods:
 
-* `ArisenVaultSignatureProvider.signTransaction(request:completion:)` signs an [`ArisenTransaction`](https://github.com/Arisen/Arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift).
+* `ArisenVaultSignatureProvider.signTransaction(request:completion:)` signs an [`ArisenTransaction`](https://github.com/arisenio/Arisen-swift/blob/master/ArisenSwift/ArisenTransaction/ArisenTransaction.swift).
 * `ArisenVaultSignatureProvider.getAvailableKeys(...)` returns an array containing the public keys associated with the private keys that the object is initialized with.
 
 To initialize the implementation:
@@ -108,15 +108,15 @@ To initialize the implementation:
   * `accessGroup`: [Learn more about Access Groups here.](https://developer.apple.com/documentation/security/keychain_services/keychain_items/sharing_access_to_keychain_items_among_a_collection_of_apps)
   * `requireBio`: Defaults to `false`. Some keys may require biometric authentication no matter what this flag is set to. For keys that do not require biometric authentication themselves, this flag can force the bio check.
 
-Other Keychain and/or Secure Enclave functionality can be accessed by calling methods directly on [ARISEN SDK for Swift: Vault](https://github.com/ARISEN/arisen-swift-vault), which is included with this library as a dependency.
+Other Keychain and/or Secure Enclave functionality can be accessed by calling methods directly on [ARISEN SDK for Swift: Vault](https://github.com/arisenio/arisen-swift-vault), which is included with this library as a dependency.
 
 ## Want to help?
 
-Interested in contributing? That's awesome! Here are some [Contribution Guidelines](https://github.com/ARISEN/arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/ARISEN/arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md#conduct).
+Interested in contributing? That's awesome! Here are some [Contribution Guidelines](https://github.com/arisenio/arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md) and the [Code of Conduct](https://github.com/arisenio/arisen-swift-vault-signature-provider/blob/master/CONTRIBUTING.md#conduct).
 
 ## License
 
-[MIT](https://github.com/ARISEN/arisen-swift-vault-signature-provider/blob/master/LICENSE)
+[MIT](https://github.com/arisenio/arisen-swift-vault-signature-provider/blob/master/LICENSE)
 
 ## Important
 
